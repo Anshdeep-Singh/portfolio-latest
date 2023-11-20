@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
@@ -9,8 +10,8 @@ const Navbar = () => {
           
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-4">
-              <a href="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-              <a href="/projects" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+              <Link href="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+              <Link href="/projects" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
             </div>
           </div>
         </div>
