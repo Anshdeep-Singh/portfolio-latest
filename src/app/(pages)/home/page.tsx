@@ -10,7 +10,7 @@ import { BulbComponent, DownloadComponent } from "@/app/components/Icons";
 import Footer from "@/app/components/Footer";
 import SpinningLogo from "@/app/components/SpinningLogo";
 
-const HomePage = async () => {
+const page = async () => {
   const user = {
     name: "Anshdeep Singh",
     bio: "Jack of all trades, master of some.",
@@ -74,4 +74,4 @@ const HomePage = async () => {
   );
 };
 
-export default HomePage;
+export default page;
