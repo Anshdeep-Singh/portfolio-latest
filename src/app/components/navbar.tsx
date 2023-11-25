@@ -9,7 +9,7 @@ import { FbComponent, InstaComponent,LinkedinComponent, GitComponent } from './I
 
 const Navbar = () => {
   return (
-    <header className="w-full px-32 py-10 font-medium flex item-center justify-between">
+    <header className="w-full px-32 py-12 font-medium flex item-center justify-between">
     <nav className="flex items-center justify-center flex-wrap">
       <motion.a href="/home" className="mx-4" whileHover={{y:-4}} whileTap={{scale:0.9}} >Home</motion.a>
       <motion.a href="/projects/" className="mx-4" whileHover={{y:-4}} whileTap={{scale:0.9}}>Projects</motion.a>

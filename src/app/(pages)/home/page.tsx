@@ -1,4 +1,3 @@
-import Navbar from "@/app/components/navbar";
 import { ref } from "firebase/storage";
 import { getDownloadURL } from "firebase/storage";
 import React from "react";
@@ -7,7 +6,6 @@ import Image from "next/image";
 import AnimatedText from "@/app/components/AnimatedText";
 import Link from "next/link";
 import { BulbComponent, DownloadComponent } from "@/app/components/Icons";
-import Footer from "@/app/components/Footer";
 import SpinningLogo from "@/app/components/SpinningLogo";
 
 const page = async () => {
@@ -45,7 +43,7 @@ const page = async () => {
               text={user.bio}
               className="!text-5xl !text-left font-semibold"
             />
-            <p className="my-4 text-base font-medium">{user.summary}</p>
+            <p className="my-4 text-base font-medium hover:animate-wiggle">{user.summary}</p>
             <div className="flex items-center self-start mt-2">
               <Link
                 href={resumeUrl}
@@ -58,7 +56,7 @@ const page = async () => {
               </Link>
               <a
                 href="https://www.linkedin.com/in/anshdeepsingh369/"
-                className="ml-4 text-lg font-medium capitalize text-black underline"
+                className="ml-4 text-lg font-medium capitalize text-black underline hover:text-blue-500"
               >
                 Contact
               </a>
@@ -67,9 +65,11 @@ const page = async () => {
         </div>
       </div>
       <SpinningLogo />
-      <div className="absolute right-20 bottom-8 inline-block w-24">
-        <BulbComponent />
-      </div>
+      <div className="absolute right-20 bottom-8 inline-block w-24" >
+  <a href="https://www.bbc.com/news/world" target="_blank" rel="noopener noreferrer">
+    <BulbComponent />
+  </a>
+</div>
     </main>
   );
 };
