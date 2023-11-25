@@ -5,43 +5,30 @@ export const FbComponent = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
-    viewBox="0 0 72 72"
+    viewBox="0 0 128 128"
     {...props}
   >
-    <path
-      fill="#61b2e4"
-      d="M57 12H15a4 4 0 0 0-4 4v42a4 4 0 0 0 4 4h42a4 4 0 0 0 4-4V16a4 4 0 0 0-4-4Z"
-    />
-    <path
-      fill="none"
-      stroke="#fff"
-      strokeMiterlimit={10}
-      strokeWidth={2}
-      d="M36.935 62.009h9.5"
+    <rect
+      width={118.35}
+      height={118.35}
+      x={4.83}
+      y={4.83}
+      fill="#3d5a98"
+      rx={6.53}
+      ry={6.53}
     />
     <path
       fill="#fff"
-      d="M48.5 26.844h4.688v-7.031c-3.126 0-15.626-3.125-15.626 10.156v4.687h-6.25v7.813h6.25v18.564l7.813-.014V42.47h7.031l.781-7.813h-7.812V29.97c0-3.125 2.344-3.125 3.125-3.125Z"
+      d="M86.48 123.17V77.34h15.38l2.3-17.86H86.48v-11.4c0-5.17 1.44-8.7 8.85-8.7h9.46v-16A126.56 126.56 0 0 0 91 22.7c-13.62 0-23 8.3-23 23.61v13.17H52.62v17.86H68v45.83z"
     />
-    <g fill="none" stroke="#000" strokeWidth={2}>
-      <path
-        strokeMiterlimit={10}
-        d="M45.619 62h12.155A3.226 3.226 0 0 0 61 58.774V15.226A3.226 3.226 0 0 0 57.774 12H14.226A3.226 3.226 0 0 0 11 15.226v43.548A3.226 3.226 0 0 0 14.226 62h23.476"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M45.618 62V42.208h7.125l.792-7.917h-7.917v-4.75c0-3.167 2.375-3.167 3.167-3.167h4.75V19.25c-3.2-.324-15.834-3.166-15.834 10.292v4.75h-6.333v7.917h6.333V62"
-      />
-    </g>
   </svg>
 )
 
 export const InstaComponent = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={30}
-    height={30}
+    width={32}
+    height={32}
     viewBox="0 0 256 256"
     {...props}
   >
@@ -84,37 +71,22 @@ export const InstaComponent = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export const LinkedinComponent = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={32}
-      height={32}
-      viewBox="0 0 72 72"
-      {...props}
-    >
-      <rect width={50} height={50} x={11} y={11} fill="#61b2e4" rx={3} />
-      <path fill="#fff" d="M20 30h6v21h-6z" />
-      <circle cx={23} cy={22} r={3.5} fill="#fff" />
-      <path
-        fill="#fff"
-        d="M42.5 35c-2.209 0-4 1.168-4 4.5V51h-6V30h6v2.21h-.002A7.981 7.981 0 0 1 44.5 29.5c4.418 0 8 3.3 8 9V51h-6V39.5c0-3.332-1.79-4.5-4-4.5"
-      />
-      <g fill="none" stroke="#000" strokeWidth={2}>
-        <rect width={50} height={50} x={11} y={11} strokeMiterlimit={10} rx={3} />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20 30h6v21h-6z" />
-        <circle
-          cx={23}
-          cy={22}
-          r={3.5}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M42.5 35c-2.209 0-4 1.168-4 4.5V51h-6V30h6v2.21h-.002A7.981 7.981 0 0 1 44.5 29.5c4.418 0 8 3.3 8 9V51h-6V39.5c0-3.332-1.79-4.5-4-4.5"
-        />
-      </g>
-    </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={32}
+    height={32}
+    viewBox="0 0 128 128"
+    {...props}
+  >
+    <path
+      fill="#0076b2"
+      d="M116 3H12a8.91 8.91 0 0 0-9 8.8v104.42a8.91 8.91 0 0 0 9 8.78h104a8.93 8.93 0 0 0 9-8.81V11.77A8.93 8.93 0 0 0 116 3z"
+    />
+    <path
+      fill="#fff"
+      d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 1 1-10.5 10.49 10.5 10.5 0 0 1 10.5-10.49m20.41 29h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
+    />
+  </svg>
   )
 
   export const GitComponent = (props: React.SVGProps<SVGSVGElement>) => (
@@ -148,8 +120,7 @@ export const LinkedinComponent = (props: React.SVGProps<SVGSVGElement>) => (
 
 
   export const SpinningText = (props: React.SVGProps<SVGSVGElement> ) => (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="200" height="200" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" className="animate-spin-slow">
-    <g transform="translate(0,300) scale(0.1,-0.1)" fill="#000000" stroke="none">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="200" height="200" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" className="animate-spin-slow md:w-24 md:h-24">    <g transform="translate(0,300) scale(0.1,-0.1)" fill="#000000" stroke="none">
 <path d="M1810 2874 c-11 -12 -10 -18 3 -31 8 -9 23 -13 31 -10 21 8 21 43 0 51 -21 8 -20 8 -34 -10z"/>
 <path d="M1154 2856 l-81 -22 17 -54 c10 -30 23 -81 29 -113 12 -53 14 -57 34 -51 12 4 51 15 87 23 52 13 65 19 62 34 -4 20 -12 21 -79 3 -51 -14 -51 -14 -58 11 -8 34 -2 40 50 47 37 6 45 11 45 28 0 17 -4 19 -27 14 -95 -21 -95 -21 -91 10 3 26 8 30 56 38 45 8 52 13 52 33 0 13 -3 23 -7 22 -5 -1 -44 -11 -89 -23z"/>
 <path d="M1319 2835 c-3 -2 -2 -35 2 -72 5 -37 8 -76 8 -85 1 -12 9 -18 24 -18 22 0 23 3 19 58 -3 44 0 61 11 71 20 16 61 11 64 -9 15 -114 13 -110 38 -110 22 0 23 2 18 63 -7 83 -23 107 -71 107 -21 0 -44 -6 -51 -12 -11 -10 -14 -10 -18 0 -5 12 -35 17 -44 7z"/>

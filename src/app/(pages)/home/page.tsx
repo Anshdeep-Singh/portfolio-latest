@@ -27,24 +27,24 @@ const page = async () => {
 
   return (
     <main className="flex items-center text-dark w-full flex-grow pt-0">
-      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0">
-        <div className="flex item-center justify-between w-full">
-          <div className="w-1/2">
+      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-16 md:p-12 sm:p-8">
+        <div className="flex item-center justify-between w-full lg:flex-col">
+          <div className="w-1/2 md:w-full">
             <Image
               src={profileImageUrl}
               alt="Profile Image"
               width={200}
               height={200}
-              className="w-full h-auto"
+              className="w-full h-auto lg:hidden md:inline-block md:w-full"
             />
           </div>
-          <div className="w-1/2 flex flex-col items-center self-center">
+          <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center md:w-full">
             <AnimatedText
               text={user.bio}
-              className="!text-5xl !text-left font-semibold"
+              className="!text-5xl !text-left font-semibold xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-3xl sm:!text-2xl"
             />
             <p className="my-4 text-base font-medium hover:animate-wiggle">{user.summary}</p>
-            <div className="flex items-center self-start mt-2">
+            <div className="flex items-center self-start mt-2 lg:self-center">
               <Link
                 href={resumeUrl}
                 target="_blank"
@@ -65,7 +65,7 @@ const page = async () => {
         </div>
       </div>
       <SpinningLogo />
-      <div className="absolute right-20 bottom-8 inline-block w-24" >
+      <div className="absolute right-20 bottom-8 inline-block w-24 md:hidden" >
   <a href="https://www.bbc.com/news/world" target="_blank" rel="noopener noreferrer">
     <BulbComponent />
   </a>

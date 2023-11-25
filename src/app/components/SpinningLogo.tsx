@@ -8,15 +8,16 @@ const SpinningLogo: React.FC = () => {
 
   return (
     <div className='fixed left-4 bottom-4 display-flex items-center justify-center overflow-hidden'>
-      <div className='w-48 h-auto display-flex items-center justify-center relative'>
+      <div className='w-48 h-auto display-flex items-center justify-center relative md:w-24'>
         <SpinningText />
         <Link
           href="https://www.instagram.com/anshdeep_singh_/"
-          className='flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white shadow-md border border-solid border-black w-20 h-20 rounded-full hover:bg-white hover:text-black ml-1'
+          className='flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-black text-white shadow-md border border-solid border-black w-20 h-20 rounded-full hover:bg-white hover:text-black ml-1 md:ml-0
+          md:w-12 md:h-12 md:text-[10px]'
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          {hovered ? "Let's Go" : "Connect"}
+          {hovered ? "Let's Go!" : "Connect"}
         </Link>
       </div>
     </div>
