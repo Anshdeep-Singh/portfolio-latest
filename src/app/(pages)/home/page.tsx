@@ -56,12 +56,12 @@ const page = async () => {
                 Resume
                 <DownloadComponent className="ml-1" />
               </Link>
-              <Link
-                href="mailto:anshdeepsaini@gmail.com"
+              <a
+                href="https://www.linkedin.com/in/anshdeepsingh369/"
                 className="ml-4 text-lg font-medium capitalize text-black underline"
               >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         </div>
