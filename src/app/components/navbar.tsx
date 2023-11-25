@@ -1,23 +1,32 @@
 
 import Link from 'next/link';
 import React from 'react';
+import Logo from './Logo';
+import { motion } from 'framer-motion';
+import { FbComponent, InstaComponent,LinkedinComponent, GitComponent } from './Icons';
+
+
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16">
-          
-          <div className="hidden md:block">
-            <div className="flex items-baseline space-x-4">
-              <Link href="/home" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-              <Link href="/projects" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
-            </div>
-          </div>
-        </div>
-      </div>
+    <header className="w-full px-32 py-10 font-medium flex item-center justify-between">
+    <nav className="flex items-center justify-center flex-wrap">
+      <motion.a href="/home" className="mx-4" whileHover={{y:-4}} whileTap={{scale:0.9}} >Home</motion.a>
+      <motion.a href="/projects" className="mx-4" whileHover={{y:-4}} whileTap={{scale:0.9}}>Projects</motion.a>
     </nav>
+    <nav className='flex items-center justify-center flex-wrap'>
+    <motion.a href="https://www.linkedin.com/in/anshdeepsingh369/" target={"_blank"} className='mx-4 w-6 mr-3' whileHover={{y:-4}} whileTap={{scale:0.9}}><LinkedinComponent/></motion.a>
+    <motion.a href="https://github.com/Anshdeep-Singh" target={"_blank"} className='mx-4 w-6 mr-3' whileHover={{y:-4}} whileTap={{scale:0.9}}><GitComponent/></motion.a>
+      <motion.a href="https://www.facebook.com/anshdeep.s.saini/" target={"_blank"} className='mx-4 w-6 mr-3' whileHover={{y:-4}} whileTap={{scale:0.9}}><FbComponent/></motion.a>
+      <motion.a href="https://www.instagram.com/the_cosmic_painter/" target={"_blank"} className='mx-4 w-6 mr-3' whileHover={{y:-4}} whileTap={{scale:0.9}}><InstaComponent/></motion.a>
+    </nav>
+    <div className='absolute left-[50%] top-2 translate-x-[-50%]'>    <Logo />
+</div>
+  </header>
   );
 };
 
 export default Navbar;
+
+
+

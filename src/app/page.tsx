@@ -1,22 +1,36 @@
 "use client";
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import { Montserrat } from "next/font/google";
+import Footer from "./components/Footer";
+import { useEffect } from "react";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-mont",
+});
 
 export default function Home() {
-  const router = useRouter(); // Invoke useRouter to get the router instance
+  const router = useRouter();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    router.push("/home"); // Use the router instance
+  }, [router]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <div className="text-center my-6">
-          <p className="text-xl text-gray-400">Hello,!</p>
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full mt-4"
-            onClick={() => router.push('/home')} // Use the router instance
-          >
-            Go to Dashboard
-          </button>
-        </div>
+    <main
+      className={`${montserrat.className} flex items-center justify-center h-screen`}
+    >
+      <div className="text-center">
+        <p className="text-xl text-gray-400">Hello,!</p>
+        <button
+          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full mt-4"
+          onClick={() => router.push("/home")}
+        >
+          Redirecting to Home Page
+        </button>
       </div>
     </main>
   );

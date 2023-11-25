@@ -1,71 +1,76 @@
-import Navbar from '@/app/components/navbar';
-import { ref } from 'firebase/storage';
-import { getDownloadURL } from 'firebase/storage';
-import React from 'react';
-import { storage } from '../../firebase';
+import Navbar from "@/app/components/navbar";
+import { ref } from "firebase/storage";
+import { getDownloadURL } from "firebase/storage";
+import React from "react";
+import { storage } from "../../firebase";
+import Image from "next/image";
+import AnimatedText from "@/app/components/AnimatedText";
+import Link from "next/link";
+import { BulbComponent, DownloadComponent } from "@/app/components/Icons";
+import Footer from "@/app/components/Footer";
+import SpinningLogo from "@/app/components/SpinningLogo";
 
 const HomePage = async () => {
-
-
   const user = {
-    name: 'Anshdeep Singh',
-    bio: 'Jack of all trades, master of none.', 
-    location: 'Vancouver, Canada',
-    website: 'https://new.anshdeepsingh.com',
-    skills: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
+    name: "Anshdeep Singh",
+    bio: "Jack of all trades, master of some.",
+    location: "Vancouver, Canada",
+    website: "https://new.anshdeepsingh.com",
+    summary:
+      "Tech enthusiast skilled in web development and AI. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.",
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   };
 
-  const profileImageRef = ref(storage, 'display_pics/anshdeep3.jpeg');
-  
+  const profileImageRef = ref(storage, "display_pics/anshdeep4.png");
+  const resumeRef = ref(storage, "resume/IT System Developer.pdf");
+
   const profileImageUrl = await getDownloadURL(profileImageRef);
+  const resumeUrl = await getDownloadURL(resumeRef);
 
-  
   return (
-    <div>      
-<header className="bg-black text-white pt-4 pb-4 flex">
-
-<div className="max-w-3xl mx-auto flex items-center">
-  <div className="inset-0">
-  <img
-    src={profileImageUrl}
-    alt="Profile"
-    className="md:w-360 md:h-80 rounded-full object-cover filter grayscale mix-blend-luminosity z-1"
-  />
-  </div>
-  <div className="flex-1 pl-4 z-10">
-    <h1 className="text-7xl font-bold mb-2 whitespace-nowrap">{user.name}</h1>
-    <p className="text-xl text-gray-400 text-center">{user.bio}</p>
-  </div>
-</div>
-
-
-</header>
-      <main className="max-w-3xl mx-auto p-4">
-        <div className="flex justify-between items-center mb-4">
-          
-          <h2 className="text-xl font-medium">About</h2>
-          <a href={user.website} className="text-blue-500 hover:underline">Website</a>
+    <main className="flex items-center text-dark w-full flex-grow pt-0">
+      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0">
+        <div className="flex item-center justify-between w-full">
+          <div className="w-1/2">
+            <Image
+              src={profileImageUrl}
+              alt="Profile Image"
+              width={200}
+              height={200}
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="w-1/2 flex flex-col items-center self-center">
+            <AnimatedText
+              text={user.bio}
+              className="!text-5xl !text-left font-semibold"
+            />
+            <p className="my-4 text-base font-medium">{user.summary}</p>
+            <div className="flex items-center self-start mt-2">
+              <Link
+                href={resumeUrl}
+                target="_blank"
+                className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-gray-300 shadow-lg"
+                download={true}
+              >
+                Resume
+                <DownloadComponent className="ml-1" />
+              </Link>
+              <Link
+                href="mailto:anshdeepsaini@gmail.com"
+                className="ml-4 text-lg font-medium capitalize text-black underline"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
         </div>
-        
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, eu aliquam nisl nunc euismod nunc.
-        </p>
-        
-        <h2 className="text-xl font-medium mt-4 mb-2">Skills</h2>
-        
-        <div className="flex flex-wrap gap-2">
-          {user.skills.map(skill => (
-            <span key={skill} className="bg-gray-200 rounded-full py-1 px-3 text-xs">{skill}</span>  
-          ))}
-        </div>
-        
-        <h2 className="text-xl font-medium mt-4 mb-2">Location</h2>
-        
-        <p>{user.location}</p>
-        
-      </main>
-      
-    </div>
+      </div>
+      <SpinningLogo />
+      <div className="absolute right-20 bottom-8 inline-block w-24">
+        <BulbComponent />
+      </div>
+    </main>
   );
 };
 
