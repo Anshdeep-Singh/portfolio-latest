@@ -65,6 +65,7 @@ const page = async () => {
               </Link>
               <a
                 href="https://www.linkedin.com/in/anshdeepsingh369/"
+                target="_blank"
                 className="ml-4 text-lg font-medium capitalize text-black underline hover:text-blue-500 md:text-md sm:text-sm"
               >
                 Contact
