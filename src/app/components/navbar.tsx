@@ -98,7 +98,7 @@ const Navbar = () => {
             Projects
           </motion.a>
           <motion.a
-            href="/projects/"
+            href="/skills/"
             className="mx-4"
             whileHover={{ y: -4 }}
             whileTap={{ scale: 0.9 }}
@@ -176,7 +176,7 @@ const Navbar = () => {
               </CustomMobilelink>
               <CustomMobilelink
                 title="Skills"
-                href="/projects/"
+                href="/skills/"
                 className=""
                 toggle={handleToggle}
                 router={router}

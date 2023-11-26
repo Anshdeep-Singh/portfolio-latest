@@ -17,14 +17,24 @@ const config: Config = {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
-        }
+        },
+        pulse : {
+          '0%, 100%': { opacity: "1" },
+          '50%': { opacity: "0.5" },
+        },
+
       },
     },
     animation: {
       'spin-slow': 'spin 8s linear infinite',
       'wiggle': 'wiggle 1s ease-in-out infinite',
-
+      'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
     },
+    backgroundImage:{
+      webPattern: 'repeating-radial-gradient(circle, #000 0 1px, transparent 1px 64px);',
+      webPatternMb: 'repeating-radial-gradient(circle, #000 0 1px, transparent 1px 32px);',
+
+        },
     screens: {
       "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
