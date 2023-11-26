@@ -27,7 +27,7 @@ const page = async () => {
 
   return (
     <main className="flex items-center text-dark w-full flex-grow pt-0">
-      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-16 md:p-12 sm:p-8">
+      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <div className="flex item-center justify-between w-full lg:flex-col">
           <div className="w-1/2 md:w-full">
             <Image
@@ -43,12 +43,12 @@ const page = async () => {
               text={user.bio}
               className="!text-5xl !text-left font-semibold xl:!text-4xl lg:!text-center lg:!text-5xl md:!text-3xl sm:!text-2xl"
             />
-            <p className="my-4 text-base font-medium hover:animate-wiggle">{user.summary}</p>
+            <p className="my-4 text-base font-medium hover:animate-wiggle sm:text-sm">{user.summary}</p>
             <div className="flex items-center self-start mt-2 lg:self-center">
               <Link
                 href={resumeUrl}
                 target="_blank"
-                className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-gray-300 shadow-lg"
+                className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-gray-300 shadow-lg sm:p-1.5 sm:text-sm"
                 download={true}
               >
                 Resume
@@ -56,7 +56,7 @@ const page = async () => {
               </Link>
               <a
                 href="https://www.linkedin.com/in/anshdeepsingh369/"
-                className="ml-4 text-lg font-medium capitalize text-black underline hover:text-blue-500"
+                className="ml-4 text-lg font-medium capitalize text-black underline hover:text-blue-500 md:text-md sm:text-sm"
               >
                 Contact
               </a>

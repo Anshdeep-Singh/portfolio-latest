@@ -120,7 +120,7 @@ export const LinkedinComponent = (props: React.SVGProps<SVGSVGElement>) => (
 
 
   export const SpinningText = (props: React.SVGProps<SVGSVGElement> ) => (
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="200" height="200" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" className="animate-spin-slow md:w-24 md:h-24">    <g transform="translate(0,300) scale(0.1,-0.1)" fill="#000000" stroke="none">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="200" height="200" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" className="animate-spin-slow md:w-24 md:h-24 sm:w-12 sm:h-12">    <g transform="translate(0,300) scale(0.1,-0.1)" fill="#000000" stroke="none">
 <path d="M1810 2874 c-11 -12 -10 -18 3 -31 8 -9 23 -13 31 -10 21 8 21 43 0 51 -21 8 -20 8 -34 -10z"/>
 <path d="M1154 2856 l-81 -22 17 -54 c10 -30 23 -81 29 -113 12 -53 14 -57 34 -51 12 4 51 15 87 23 52 13 65 19 62 34 -4 20 -12 21 -79 3 -51 -14 -51 -14 -58 11 -8 34 -2 40 50 47 37 6 45 11 45 28 0 17 -4 19 -27 14 -95 -21 -95 -21 -91 10 3 26 8 30 56 38 45 8 52 13 52 33 0 13 -3 23 -7 22 -5 -1 -44 -11 -89 -23z"/>
 <path d="M1319 2835 c-3 -2 -2 -35 2 -72 5 -37 8 -76 8 -85 1 -12 9 -18 24 -18 22 0 23 3 19 58 -3 44 0 61 11 71 20 16 61 11 64 -9 15 -114 13 -110 38 -110 22 0 23 2 18 63 -7 83 -23 107 -71 107 -21 0 -44 -6 -51 -12 -11 -10 -14 -10 -18 0 -5 12 -35 17 -44 7z"/>

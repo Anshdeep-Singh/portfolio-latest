@@ -20,8 +20,8 @@ const Logo = () => {
       <MotionLink
         href="/home"
         className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-light"
-        style={{ boxShadow: "0px 10px 30px -5px rgba(0, 0, 0, 0.8)" }}
-        whileHover={{
+        style={{ boxShadow: "0px 5px 15px -3px rgba(0, 0, 0, 0.9)" }}
+                whileHover={{
           scale: 1.1,
           rotate: 360,
           transition: { duration: 0.5, ease: "easeInOut" },

@@ -57,7 +57,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-12 font-medium flex item-center justify-between relative">
+    <header className="w-full px-32 py-12 font-medium flex item-center justify-between relative md:px-16">
       <button
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleToggle}
