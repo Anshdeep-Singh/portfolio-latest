@@ -11,7 +11,8 @@ import SpinningLogo from "@/app/components/SpinningLogo";
 import { Metadata } from 'next'
  
 export const metadata: Metadata = {
-  title: 'Welcome to the portfolio website of Anshdeep Singh. A tech enthusiast skilled in AI, Data Analytics, Web Development, and Software Development. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.',
+  title: 'Anshdeep Singh',
+  description: 'Welcome to the portfolio website of Anshdeep Singh. A tech enthusiast skilled in AI, Data Analytics, Web Development, and Software Development. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.',
 }
  
 

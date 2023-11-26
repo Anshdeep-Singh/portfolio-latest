@@ -7,8 +7,8 @@ const SpinningLogo: React.FC = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className='fixed left-4 bottom-4 display-flex items-center justify-center overflow-hidden'>
-      <div className='w-48 h-auto display-flex items-center justify-center relative md:w-24 sm:w-12'>
+<div className='fixed left-4 bottom-4 display-flex items-center justify-center overflow-hidden sm:top-4 sm:left-auto sm:right-4'>
+          <div className='w-48 h-auto display-flex items-center justify-center relative md:w-24 sm:w-24'>
         <SpinningText />
         <Link
           href="https://www.instagram.com/anshdeep_singh_/"
