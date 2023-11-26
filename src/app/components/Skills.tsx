@@ -241,7 +241,7 @@ const Skills = () => {
         <Skill
           name="Power BI"
           x={{ sm: "-10vw", lg: "-10vw" }}
-          y={{ sm: "-30vw", lg: "-21vw" }}
+          y={{ sm: "-30vw", lg: "-23vw" }}
           className=""
         />
         <Skill
