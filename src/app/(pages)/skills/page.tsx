@@ -6,10 +6,9 @@ import Education from "@/app/components/Education";
 import { BuyCoffeeComponent } from "@/app/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Anshdeep Singh",
-  description:
-    "Welcome to the portfolio website of Anshdeep Singh. A tech enthusiast skilled in AI, Data Analytics, Web Development, and Software Development. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.",
-};
+    title: "Anshdeep Singh - Skills, Experience, Education",
+    description: "Anshdeep Singh is a skilled individual with a diverse set of talents spanning the fields of machine learning, software development, and web technologies. His expertise includes Python, OpenCV, Keras, Pandas, Numpy, MatplotLib, Java, Bootstrap, Spring Boot, Firebase, MySQL, TypeScript, React, Tailwind CSS, Next, HTML, Express, Node, CSS, MongoDB, JavaScript, GitHub, Figma, Canva, Power BI, Tableau, and more. Anshdeep's experience includes roles such as a Research Assistant at Douglas College, ML Engineer at Tekolutions, Research Student Intern at SCAII, and Reliability Engineer Intern at SCL, ISRO. He holds a strong educational background with a focus on Computing and Information Systems - Data Analytics from Douglas College, B.Tech in Electronics and Telecommunication from SIT, Pune, and a Diploma in Business Management from SIBM, Pune. Anshdeep's projects showcase his versatility, from developing a social media-infused marketplace to building a Bart-Trading Platform with Next.js and Firestore. With a commitment to excellence, Anshdeep is well-prepared for dynamic roles in the ever-evolving technology landscape."
+  };
 
 const page = () => {
   return (

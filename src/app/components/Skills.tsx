@@ -27,8 +27,9 @@ whileHover={{
           boxShadow: "0px 0px 20px 0px rgba(0,0,0,0.75)",
         }}
         initial={{ opacity: 0, x: 0, y: 0 }}
-        animate={{ opacity: 1, x: xPos, y: yPos }}
+        whileInView={{ opacity: 1, x: xPos, y: yPos }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true}}
       >
         {name}
       </motion.div>
@@ -249,6 +250,12 @@ const Skills = () => {
           x={{ sm: "0vw", lg: "0vw" }}
           y={{ sm: "-24vw", lg: "-19vw" }}
           className=""
+        />
+        <Skill
+          name="Research"
+          x={{ sm: "5vw", lg: "0vw" }}
+          y={{ sm: "-36vw", lg: "-25vw" }}
+          className="hidden xs:block"
         />
       </div>
     </>
