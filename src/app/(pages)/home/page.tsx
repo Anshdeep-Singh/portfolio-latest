@@ -28,7 +28,7 @@ const page = async () => {
   };
 
   const profileImageRef = ref(storage, "display_pics/anshdeep4.png");
-  const resumeRef = ref(storage, "resume/IT System Developer.pdf");
+  const resumeRef = ref(storage, "resume/Web Developer Resume.pdf");
 
   const profileImageUrl = await getDownloadURL(profileImageRef);
   const resumeUrl = await getDownloadURL(resumeRef);
