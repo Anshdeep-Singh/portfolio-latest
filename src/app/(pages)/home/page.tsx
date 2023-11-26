@@ -8,6 +8,13 @@ import Link from "next/link";
 import { BulbComponent, DownloadComponent } from "@/app/components/Icons";
 import SpinningLogo from "@/app/components/SpinningLogo";
 
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Welcome to the portfolio website of Anshdeep Singh. A tech enthusiast skilled in AI, Data Analytics, Web Development, and Software Development. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.',
+}
+ 
+
 const page = async () => {
   const user = {
     name: "Anshdeep Singh",
@@ -26,6 +33,7 @@ const page = async () => {
   const resumeUrl = await getDownloadURL(resumeRef);
 
   return (
+    <>
     <main className="flex items-center text-dark w-full flex-grow pt-0">
       <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <div className="flex item-center justify-between w-full lg:flex-col">
@@ -71,6 +79,7 @@ const page = async () => {
   </a>
 </div>
     </main>
+    </>
   );
 };
 
