@@ -245,7 +245,7 @@ const Skills = () => {
           className=""
         />
         <Skill
-          name="Tablue"
+          name="Tableau"
           x={{ sm: "0vw", lg: "0vw" }}
           y={{ sm: "-24vw", lg: "-19vw" }}
           className=""
