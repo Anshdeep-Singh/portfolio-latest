@@ -40,11 +40,11 @@ interface DetailsProps {
 
 const Experience = () => {
 
-    const ref = useRef(null);
+    const containerRef = useRef(null);
 
     const {scrollYProgress} = useScroll(
         {
-            target: ref,
+            target: containerRef,
             offset:["start end", "center start"]
         }
     );
@@ -52,7 +52,7 @@ const Experience = () => {
     <div className='my-64'>
         <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>Experience</h2>
 
-        <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
+        <div ref={containerRef} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
         <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-black origin-top md:width-[2px] md:left-[28px] xs:left-[18px]' style={{scaleY:scrollYProgress, boxShadow: '0 0 10px #00ff00'}}/>
                     <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 <Details position='Research Assistant' company='Douglas College' time='Jan 2022 - Aug 2022' address='Vancouver, BC' work='I actively contributed to the development of MATLAB software tailored for a psychological experiment, integrating an eye tracker and a skin conductance sensor. Subsequently, I leveraged Python to generate and visualize heatmaps based on the acquired data, enhancing the analytical and interpretative aspects of the experiment.'/>
