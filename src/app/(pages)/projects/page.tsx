@@ -51,7 +51,7 @@ const Project: React.FC<ProjectProps> = ({title, type, img, link, github}) => {
                   {type}
               </span>
               <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
-                  <h2 className='my-2 w-full text-left text-3xl font-bold lg:text-2xl'>{title}</h2>
+                  <h2 className='my-2 w-full text-left text-3xl font-bold lg:text-2xl sm:text-xl'>{title}</h2>
           </Link>
           <div className='w-full mt-2 flex items-center '>
           <Link href={link} target='_blank' className='mr-4 text-lg font-semibold hover:underline md:text-base'>
@@ -85,7 +85,7 @@ const Project: React.FC<ProjectProps> = ({title, type, img, link, github}) => {
                     {type}
                 </span>
                 <Link href={link} target='_blank' className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold sm:text-sm'>{title}</h2>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold sm:text-xl'>{title}</h2>
             </Link>
             <p className='my-2 font-medium text-black sm:text-sm text-justify'>{summary}</p>
             <div className='mt-2 flex items-center '>
