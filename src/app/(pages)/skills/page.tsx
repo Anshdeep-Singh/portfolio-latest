@@ -4,6 +4,8 @@ import Skills from "@/app/components/Skills";
 import Experience from "@/app/components/Experience";
 import Education from "@/app/components/Education";
 import { BuyCoffeeComponent } from "@/app/components/Icons";
+import TransitionEffect from "@/app/components/TransitionEffect";
+import ReverseTransitionEffect from "@/app/components/ReverseTransitionEffect";
 
 export const metadata: Metadata = {
     title: "Anshdeep Singh - Skills, Experience, Education",
@@ -11,8 +13,11 @@ export const metadata: Metadata = {
   };
 
 const page = () => {
+
   return (
     <>
+    <TransitionEffect/>
+    <main>
       <div className="w-full h-full inline-block z-0 bg-white p-32 pt-1 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <Skills />
         <Experience />
@@ -27,6 +32,7 @@ const page = () => {
           <BuyCoffeeComponent />
         </a>
       </div>
+      </main>
     </>
   );
 };
