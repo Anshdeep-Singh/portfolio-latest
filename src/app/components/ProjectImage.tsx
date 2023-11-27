@@ -17,6 +17,7 @@ interface ProjectImageProps {
         <ImageMotion src={img} alt={title} width={500} height={300} className="w-full h-auto"
         whileHover={{scale:1.05}}
         transition={{duration:0.2}}
+        priority={true}
         />
       </>
     );
