@@ -10,12 +10,16 @@ import {
   GitComponent,
 } from "./Icons";
 import { useRouter } from 'next/navigation';
+import ReverseTransitionEffect from "./ReverseTransitionEffect";
+import TransitionEffect from "./TransitionEffect";
 
 
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const router = useRouter();
+
+
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
@@ -55,6 +59,7 @@ const Navbar = () => {
       </motion.button>
     );
   };
+
 
   return (
     <header className="w-full px-32 py-12 font-medium flex item-center justify-between relative md:px-16">

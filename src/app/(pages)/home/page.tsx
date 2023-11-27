@@ -9,6 +9,7 @@ import { BulbComponent, BuyCoffeeComponent, DownloadComponent } from "@/app/comp
 import SpinningLogo from "@/app/components/SpinningLogo";
 
 import { Metadata } from 'next'
+import TransitionEffect from "@/app/components/TransitionEffect";
  
 export const metadata: Metadata = {
   title: 'Anshdeep Singh',
@@ -35,6 +36,7 @@ const page = async () => {
 
   return (
     <>
+    <TransitionEffect/>
     <main className="flex items-center text-dark w-full flex-grow pt-0">
       <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <div className="flex item-center justify-between w-full lg:flex-col">
