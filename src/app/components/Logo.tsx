@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const MotionLink = motion(Link);
 
 const Logo = () => {
   const [text, setText] = useState("AS");
@@ -17,8 +16,8 @@ const Logo = () => {
 
   return (
     <div className="flex item-center justify-center mt-2">
-      <MotionLink
-        href="/home"
+      <motion.div
+        onClick={(e) => e.preventDefault()}
         className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-light"
         style={{ boxShadow: "0px 5px 15px -3px rgba(0, 0, 0, 0.9)" }}
                 whileHover={{
@@ -39,7 +38,7 @@ const Logo = () => {
         onHoverEnd={handleHoverEnd}
       >
         {text}
-      </MotionLink>
+      </motion.div>
     </div>
   );
 };

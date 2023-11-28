@@ -13,6 +13,7 @@ import { useRouter } from 'next/navigation';
 import ReverseTransitionEffect from "./ReverseTransitionEffect";
 import TransitionEffect from "./TransitionEffect";
 import QrComponent from "./QrComponent";
+import { set } from "firebase/database";
 
 
 
@@ -27,6 +28,7 @@ const Navbar = () => {
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
+    setShowQrPanel(false);
   };
 
   const toggleQr = () => {
