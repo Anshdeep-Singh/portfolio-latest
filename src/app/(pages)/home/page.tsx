@@ -77,7 +77,7 @@ const page = async () => {
         </div>
       </div>
       <SpinningLogo />
-      <div className="absolute bottom-8 right-32 sm:inline-block w-24 sm:text-center sm:transform sm:-translate-x-1/2 sm:left-1/2 sm:right-1/2 sm:pl-4  mx-auto">
+      <div className="absolute bottom-8 right-32 md:right-12 sm:inline-block w-24 sm:text-center sm:transform sm:-translate-x-1/2 sm:left-1/2 sm:right-1/2 sm:pl-4  mx-auto">
   <a href="https://www.buymeacoffee.com/anshdeep" target="_blank" rel="noopener noreferrer">
     <BuyCoffeeComponent />
   </a>
