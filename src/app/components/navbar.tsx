@@ -12,17 +12,25 @@ import {
 import { useRouter } from 'next/navigation';
 import ReverseTransitionEffect from "./ReverseTransitionEffect";
 import TransitionEffect from "./TransitionEffect";
+import QrComponent from "./QrComponent";
+
+
 
 
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [showQrPanel, setShowQrPanel] = React.useState(false);
   const router = useRouter();
 
 
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const toggleQr = () => {
+    setShowQrPanel(!showQrPanel);
   };
 
   type CustomMobilelinkProps = {
@@ -232,8 +240,10 @@ const Navbar = () => {
           </motion.div>)
              : null
           }
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        {" "}
+      {showQrPanel ? (
+        <QrComponent/>
+      ): null}
+      <div className="absolute left-[50%] top-2 translate-x-[-50%]" onClick={toggleQr}>
         <Logo />
       </div>
     </header>
