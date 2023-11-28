@@ -33,6 +33,7 @@ const Navbar = () => {
 
   const toggleQr = () => {
     setShowQrPanel(!showQrPanel);
+    setNavbarOpen(false);
   };
 
   type CustomMobilelinkProps = {
