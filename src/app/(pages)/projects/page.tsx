@@ -164,7 +164,7 @@ const page = async () => {
 
             <div className='col-span-6 sm:col-span-12'>
                 <Project 
-                title='Cifar-10 Image Classification'
+                title='Image Classification'
                 link="https://github.com/Anshdeep-Singh/CIFAR10_Classification"
                 type='AI/ML Project'
                 img={cifarUrl}
