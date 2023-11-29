@@ -23,6 +23,8 @@ jobs:
           echo "NEXT_PUBLIC_messagingSenderId=${{ secrets.NEXT_PUBLIC_MESSAGINGSENDERID }}" >> .env
           echo "NEXT_PUBLIC_appId=${{ secrets.NEXT_PUBLIC_APPID }}" >> .env
           echo "NEXT_PUBLIC_measurementId=${{ secrets.NEXT_PUBLIC_MEASUREMENTID }}" >> .env
+          echo "NEXT_PUBLIC_googleId=${{ secrets.NEXT_PUBLIC_GOOGLEID }}" >> .env
+          echo "NEXT_PUBLIC_googleSecret=${{ secrets.NEXT_PUBLIC_GOOGLESECRET }}" >> .env
           npm i && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
