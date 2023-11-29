@@ -19,24 +19,21 @@ const QrComponent = () => {
   };
 
   const handleButtonClick = async () => {
-
+    setShowQRCode(false);
+    setQrSrc("")
+    console.log(inputValue);
     try {
         const docRef = doc(db, "SearchCollection", "searches");
   
-          const updatedInputs = [inputValue];
           await updateDoc(docRef, {
             inputs: arrayUnion(inputValue)
           });
-        
-    
-        setQrSrc("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(inputValue));
-        setShowQRCode(true);
         
       } catch (err) {
         console.error("Error updating document:", err);
       }
 
-    setQrSrc(qrSrc + encodeURIComponent(inputValue));
+    setQrSrc("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(inputValue));
     setShowQRCode(true);
     setInputValue("");
   };
