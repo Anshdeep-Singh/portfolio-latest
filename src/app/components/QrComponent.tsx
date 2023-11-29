@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { db } from "../firebase";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { set } from "firebase/database";
 
 
 const QrComponent = () => {
@@ -37,6 +38,7 @@ const QrComponent = () => {
 
     setQrSrc(qrSrc + encodeURIComponent(inputValue));
     setShowQRCode(true);
+    setInputValue("");
   };
 
   return (
