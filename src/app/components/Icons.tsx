@@ -111,19 +111,14 @@ export const LinkedinComponent = (props: React.SVGProps<SVGSVGElement>) => (
   export const DownloadComponent = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={20}
-    height={20}
+    width={24}
+    height={24}
     viewBox="0 0 24 24"
     {...props}
-    className="ml-2 sm:w-[16px] sm:h-[16px]"
   >
     <path
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.5}
-      d="M6 20h12M12 4v12m0 0 3.5-3.5M12 16l-3.5-3.5"
+      fill="#fff"
+      d="M10.615 16.077H7.077q-1.692 0-2.885-1.192Q3 13.693 3 12q0-1.691 1.193-2.885 1.192-1.193 2.884-1.193h3.538v1H7.077q-1.27 0-2.173.904T4 12q0 1.27.904 2.173t2.173.904h3.538v1ZM8.5 12.5v-1h7v1h-7Zm4.885 3.577v-1h3.538q1.27 0 2.173-.904T20 12q0-1.27-.904-2.173t-2.173-.904h-3.538v-1h3.538q1.692 0 2.885 1.192Q21 10.307 21 12q0 1.691-1.193 2.885-1.192 1.193-2.884 1.193h-3.538Z"
     />
   </svg>
 

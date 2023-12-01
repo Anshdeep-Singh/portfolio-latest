@@ -29,10 +29,8 @@ const page = async () => {
   };
 
   const profileImageRef = ref(storage, "display_pics/anshdeep4.png");
-  const resumeRef = ref(storage, "resume/Web Developer Resume.pdf");
 
   const profileImageUrl = await getDownloadURL(profileImageRef);
-  const resumeUrl = await getDownloadURL(resumeRef);
 
   return (
     <>
@@ -56,15 +54,13 @@ const page = async () => {
             />
             <p className="my-4 text-base font-medium hover:animate-wiggle sm:text-sm">{user.summary}</p>
             <div className="flex items-center self-start mt-2 lg:self-center">
-              <Link
-                href={resumeUrl}
-                target="_blank"
+              <a
+                href="/resume/"
                 className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-gray-300 shadow-lg sm:p-1.5 sm:text-sm"
-                download={true}
               >
                 Resume
                 <DownloadComponent className="ml-1" />
-              </Link>
+              </a>
               <a
                 href="https://www.linkedin.com/in/anshdeepsingh369/"
                 target="_blank"

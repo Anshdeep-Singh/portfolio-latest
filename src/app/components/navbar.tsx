@@ -121,6 +121,14 @@ const Navbar = () => {
           >
             Skills
           </motion.a>
+          <motion.a
+            href="/resume/"
+            className="mx-4"
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Resume
+          </motion.a>
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
@@ -199,6 +207,15 @@ const Navbar = () => {
 
               >
                 Skills
+              </CustomMobilelink>
+              <CustomMobilelink
+                title="Resume"
+                href="/resume/"
+                className=""
+                toggle={handleToggle}
+                router={router}
+              >
+                Resume
               </CustomMobilelink>
     
             </nav>
