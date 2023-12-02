@@ -263,7 +263,7 @@ const Navbar = () => {
       {showQrPanel ? (
         <QrComponent/>
       ): null}
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]" onClick={toggleQr}>
+      <div className="absolute left-[50%] top-2 translate-x-[-50%] cursor-pointer" onClick={toggleQr}>
         <Logo />
       </div>
     </header>

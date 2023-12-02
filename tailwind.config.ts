@@ -22,6 +22,10 @@ const config: Config = {
           '0%, 100%': { opacity: "1" },
           '50%': { opacity: "0.5" },
         },
+        bounce : {
+          '0%, 100%': { transform: "translateY(0)" },
+          '50%': { transform: "translateY(-10px)" },
+        },
 
       },
     },
@@ -29,6 +33,8 @@ const config: Config = {
       'spin-slow': 'spin 8s linear infinite',
       'wiggle': 'wiggle 1s ease-in-out infinite',
       'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'bounce': 'bounce 1s infinite',
+
     },
     backgroundImage:{
       webPattern: 'repeating-radial-gradient(circle, #000 0 1px, transparent 1px 64px);',

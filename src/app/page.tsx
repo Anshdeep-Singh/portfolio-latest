@@ -25,12 +25,12 @@ export default function Home() {
     >
       <div className="text-center">
         <p className="text-xl text-gray-400">Hello,!</p>
-        <button
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full mt-4"
+        <div
+          className="font-semibold py-2 px-4 rounded-full mt-4 animate-bounce"
           onClick={() => router.push("/home")}
         >
           Redirecting to Home Page
-        </button>
+        </div>
       </div>
     </main>
   );
