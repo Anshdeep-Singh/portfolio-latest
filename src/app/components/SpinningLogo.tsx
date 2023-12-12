@@ -18,7 +18,7 @@ const SpinningLogo: React.FC = () => {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          {hovered ? "Let's Go!" : "Connect"}
+          {hovered ? "Let's Go!" : "ChatApp"}
         </Link>
       </div>
     </div>

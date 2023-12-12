@@ -217,7 +217,15 @@ const Navbar = () => {
               >
                 Resume
               </CustomMobilelink>
-    
+              <CustomMobilelink
+                title="Global Chat App"
+                href="https://chat.anshdeepsingh.com/"
+                className=""
+                toggle={handleToggle}
+                router={router}
+              >
+                Global Chat App
+              </CustomMobilelink>
             </nav>
             <nav className="flex items-center justify-center flex-wrap">
               <motion.a

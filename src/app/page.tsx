@@ -24,7 +24,7 @@ export default function Home() {
       className={`${montserrat.className} flex items-center justify-center h-screen`}
     >
       <div className="text-center">
-        <p className="text-xl text-gray-400">Hello,!</p>
+        <p className="text-xl text-gray-400">Hello!</p>
         <div
           className="font-semibold py-2 px-4 rounded-full mt-4 animate-bounce"
           onClick={() => router.push("/home")}
