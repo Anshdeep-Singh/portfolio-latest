@@ -75,6 +75,7 @@ const page = async () => {
      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
      <AnimatedText text='Resume Vault' className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xl:!text-4xl xs:!text-3xl'/>
      <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
+     
      <div className='col-span-6 sm:col-span-12'>
         <Project
         title="Data Science | Machine Learning"
