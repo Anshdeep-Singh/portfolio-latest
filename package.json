@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.13",
+    "@types/three": "^0.160.0",
     "firebase": "^10.6.0",
     "firebase-admin": "^11.11.0",
     "framer-motion": "^10.16.5",
-    "next": "14.0.3",
+    "gsap": "^3.12.4",
+    "i": "^0.3.7",
+    "next": "^14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.160.0"
   },
   "devDependencies": {
     "@types/node": "^20",
