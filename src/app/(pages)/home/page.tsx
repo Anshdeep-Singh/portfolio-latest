@@ -25,7 +25,7 @@ const page = async () => {
     location: "Vancouver, Canada",
     website: "https://new.anshdeepsingh.com",
     summary:
-      "Tech enthusiast skilled in web development and AI. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.",
+      "Tech enthusiast skilled in web development, data analytics and AI. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.",
     skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   };
 
