@@ -55,15 +55,20 @@ const Project: React.FC<ProjectProps> = ({title, type, img, link, github}) => {
 const page = async () => {
     const resumeDA = ref(storage, "display_pics/DataAnalyst.png");
     const resumeWebDev = ref(storage, "display_pics/WebDevelopment.png");
+    const resumeML = ref(storage, "display_pics/ML.png");
+
     const resumeDARef = ref(storage, "resume/Data_Analyst_Resume.pdf");
     const resumeWDRef = ref(storage, "resume/Web_Developer_Resume.pdf");
+    const resumeMLRef = ref(storage, "resume/ML_Engineer_Resume.pdf");
 
 
     const resumeDAUrl = await getDownloadURL(resumeDA);
     const resumeWebDevUrl = await getDownloadURL(resumeWebDev);
+    const resumeMLUrl = await getDownloadURL(resumeML);
+
     const DAUrl = await getDownloadURL(resumeDARef);
     const WDUrl = await getDownloadURL(resumeWDRef);
-
+    const MLUrl = await getDownloadURL(resumeMLRef);
     
 
 
@@ -78,8 +83,8 @@ const page = async () => {
      
      <div className='col-span-6 sm:col-span-12'>
         <Project
-        title="Data Science | Machine Learning"
-        type="AI/ML"
+        title="Data Science"
+        type="Data Analytics"
         img={resumeDAUrl}
         link={DAUrl}
         github={DAUrl}   
@@ -94,6 +99,15 @@ const page = async () => {
         github={WDUrl}   
         />
     </div>
+    <div className='col-span-6 sm:col-span-12'>
+        <Project
+        title="Machine Learning"
+        type="Artificial Intelligence"
+        img={resumeMLUrl}
+        link={MLUrl}
+        github={MLUrl}   
+        />
+     </div>   
      </div>
      </div>
      </main>   
