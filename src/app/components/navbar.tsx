@@ -8,12 +8,15 @@ import {
   InstaComponent,
   LinkedinComponent,
   GitComponent,
+  SunIcon,
+  MoonIcon,
 } from "./Icons";
 import { useRouter } from 'next/navigation';
 import ReverseTransitionEffect from "./ReverseTransitionEffect";
 import TransitionEffect from "./TransitionEffect";
 import QrComponent from "./QrComponent";
 import { set } from "firebase/database";
+import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
 
 
 
@@ -24,8 +27,8 @@ const Navbar = () => {
   const [showQrPanel, setShowQrPanel] = React.useState(false);
   const router = useRouter();
 
-
-
+  const [mode, setMode] = UseThemeSwitcher();
+  
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
     setShowQrPanel(false);
@@ -73,7 +76,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="w-full px-32 py-12 font-medium flex item-center justify-between relative md:px-16">
+    <header className="w-full px-32 py-12 font-medium flex item-center justify-between relative md:px-16 dark:bg-gray">
       <button
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleToggle}
@@ -168,6 +171,16 @@ const Navbar = () => {
           >
             <InstaComponent />
           </motion.a>
+          <button
+          onClick={()=> setMode(mode === "dark" ? "light" : "dark")}
+          className="ml-3 flex item-center justify-center rounded-full p-1"
+          >
+            {
+              mode === "light" ?
+              <SunIcon className="fill-dark"/> :
+              <MoonIcon className="fill-dark"/>
+            }
+          </button>
         </nav>
       </div>
 
@@ -256,6 +269,16 @@ const Navbar = () => {
               >
                 <InstaComponent />
               </motion.a>
+              <button
+          onClick={()=> setMode(mode === "dark" ? "light" : "dark")}
+          className="ml-3 flex item-center justify-center rounded-full p-1"
+          >
+            {
+              mode === "light" ?
+              <SunIcon className="fill-dark"/> :
+              <MoonIcon className="fill-dark"/>
+            }
+          </button>
             </nav>
           </motion.div>)
              : null

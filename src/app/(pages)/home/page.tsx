@@ -35,8 +35,8 @@ const page = async () => {
   return (
     <>
     <TransitionEffect/>
-    <main className="flex items-center text-dark w-full flex-grow pt-0">
-      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
+    <main className="flex items-center text-dark w-full flex-grow pt-0 ">
+      <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8 ">
         <div className="flex item-center justify-between w-full lg:flex-col">
           <div className="w-1/2 md:w-full">
             <Image

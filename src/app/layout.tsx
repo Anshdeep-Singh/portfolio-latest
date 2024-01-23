@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         <title>Anshdeep Singh</title>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} dark:bg-gray`}>
           <NavBar />
           {children}
       </body>
