@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import "./memoryGameStyles.css"
+import "./chessStyles.css"
 import { Inter } from 'next/font/google'
 import NavBar from "./components/navbar";
 

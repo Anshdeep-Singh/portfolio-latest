@@ -1,0 +1,116 @@
+/* Chess board styles */
+.chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    transform: rotate(-90deg);
+  }
+  
+  .board-row {
+    display: row;
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    transform: rotate(90deg);
+  }
+
+  .selected {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3); /* Adjust the shadow as needed */
+  }
+
+  /* Alternating colors for the squares */
+  .square:nth-child(odd) {
+    background-color: #ddd;
+  }
+  
+  /* Style for highlighting selected squares or legal moves */
+  .square.selected {
+    background-color: rgb(234, 242, 7);
+  }
+  
+  .legal{
+    background-color: rgb(209, 240, 107) !important;
+  }
+  /* Style for highlighting possible moves */
+  .square.highlight {
+    background-color: #8ff;
+  }
+  
+  /* Reverse the order of the rows to flip the board vertically */
+  .chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    flex-direction: column-reverse;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .chess-board {
+        display: grid;
+        grid-template-columns: repeat(8, 50px);
+        grid-template-rows: repeat(8, 50px);
+        transform: rotate(-90deg);
+      }
+
+      .square {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        transform: rotate(90deg);
+      }
+  }
+  
+  @media screen and (max-width: 530px) {
+    .chess-board {
+        display: grid;
+        grid-template-columns: repeat(8, 40px);
+        grid-template-rows: repeat(8, 40px);
+        transform: rotate(-90deg);
+      }
+
+      .square {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        transform: rotate(90deg);
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .chess-board {
+        display: grid;
+        grid-template-columns: repeat(8, 35px);
+        grid-template-rows: repeat(8, 35px);
+        transform: rotate(-90deg);
+      }
+
+      .square {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        transform: rotate(90deg);
+      }
+  }
