@@ -14,6 +14,8 @@ import ReverseTransitionEffect from "./ReverseTransitionEffect";
 import TransitionEffect from "./TransitionEffect";
 import QrComponent from "./QrComponent";
 import { set } from "firebase/database";
+import MemoryGameComponent from "./MemoryGameComponent";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 
 
@@ -269,7 +271,8 @@ const Navbar = () => {
              : null
           }
       {showQrPanel ? (
-        <QrComponent/>
+        // <QrComponent/>
+        <MemoryGameComponent/>
       ): null}
       <div className="absolute left-[50%] top-2 translate-x-[-50%] cursor-pointer" onClick={toggleQr}>
         <Logo />
