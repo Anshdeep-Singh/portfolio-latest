@@ -16,7 +16,7 @@ interface CardProps {
     return (
       <li className="card" onClick={onClick} data-index={index}>
         <div className="view front-view">
-          <span className="material-icons">?</span>
+          <span className="material-icons text-3xl sm:text-xl">?</span>
         </div>
         <div className="view back-view">
         <Image width={65} height={65} src={imageSrc} alt="cardImage" />
@@ -70,7 +70,7 @@ const MemoryGameComponent = () => {
 
 
 
-const shuffleCard = useCallback(() => {
+const shuffleCard = () => {
     // console.log("Shuffling cards");
     setMatched(0);
     setFlips(0);
@@ -83,7 +83,7 @@ const shuffleCard = useCallback(() => {
       card.classList.remove("matched");
       card.classList.remove("flip");
     });
-}, []);
+};
 
   const flipCard = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     const clickedCard = event.currentTarget as HTMLLIElement;
@@ -111,7 +111,18 @@ const shuffleCard = useCallback(() => {
         setDisableDeck(false);
         setTimeout(() => {
             if(matched === gameSize){
-                alert("You won the game");
+                if(flips <= 32){
+                    alert(`Excellent Score : ${flips} flips`);
+                }
+                else if(flips > 32 && flips <= 45){
+                    alert(`Good Score : ${flips} flips`);
+                }
+                else if(flips > 45 && flips <= 55){
+                    alert(`Average Score : ${flips} flips`);
+                }
+                else{
+                    alert(`Seriously ?! ${flips} flips, you can do better than that`);
+                }
                 shuffleCard();
             }
         }, 1000);
@@ -143,14 +154,14 @@ const shuffleCard = useCallback(() => {
       shuffleCard();
     }
     setGameSize((imageUrls.length / 2 ) - 1);
-  }, [imageUrls, restartGame,shuffleCard]);
+  }, [imageUrls, restartGame]);
 
     return (
         <>
         <motion.div
         initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
         animate={{ scale: 1, opacity: 1 }}
-        className="min-w-[70vw] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-8"
+        className="min-w-[70vw] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-8 px-1"
       >
         <h1 className="text-2xl font-bold pb-4 md:text-xl sm:text-sm">Memory Game</h1>
         <div className="wrapper">
@@ -165,7 +176,7 @@ const shuffleCard = useCallback(() => {
           </ul>
           <div className="flex flex-row justify-center items-center">
                 <h1 className="text-xl font-bold pt-2 pr-4 md:text-sm sm:text-xs">Flips : {flips}</h1>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-full mt-2 ml-2 md:text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
+                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-full mt-2 ml-2 md:text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
         </div>
         </div>
       </motion.div>
