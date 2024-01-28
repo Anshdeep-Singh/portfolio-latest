@@ -4,6 +4,22 @@ import { getDownloadURL, ref } from 'firebase/storage';
 import React, { use, useCallback, useEffect, useRef, useState } from "react";
 import { set } from "firebase/database";
 import Image from 'next/image';
+import ChessGameComponent from "./ChessGameComponent";
+
+interface Piece {
+  type: string;
+  color: 'white' | 'black';
+  image: string;
+  position: {
+    x: number;
+    y: number; 
+  }
+}
+
+interface GameState {
+  pieces: Piece[];
+  playerTurn: 'white' | 'black';
+}
 
 
 interface CardProps {
@@ -38,6 +54,7 @@ const MemoryGameComponent = () => {
   const [flips , setFlips] = useState(0);
  const [restartGame, setRestartGame] = useState(false);
  const [gameSize, setGameSize] = useState(0);
+ const [playChess, setPlayChess] = useState(false);
 
  useEffect(() => {
         const fetchImageUrls = async () => {
@@ -163,6 +180,12 @@ const shuffleCard = () => {
         animate={{ scale: 1, opacity: 1 }}
         className="min-w-[70vw] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-8 px-1"
       >
+        {playChess ? <>
+
+          <ChessGameComponent/>
+
+        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Memory Game</button>
+        </> : <>
         <h1 className="text-2xl font-bold pb-4 md:text-xl sm:text-sm">Memory Game</h1>
         <div className="wrapper">
           <ul className="cards" ref={cardsRef}>
@@ -176,9 +199,13 @@ const shuffleCard = () => {
           </ul>
           <div className="flex flex-row justify-center items-center">
                 <h1 className="text-xl font-bold pt-2 pr-4 md:text-sm sm:text-xs">Flips : {flips}</h1>
-                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-full mt-2 ml-2 md:text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
+                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
+                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setPlayChess(true)}>Chess</button>
         </div>
         </div>
+
+        </> }
+
       </motion.div>
         </>
     )
