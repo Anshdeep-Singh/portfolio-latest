@@ -162,7 +162,7 @@ const Navbar = () => {
                   whileTap={{ scale: 0.9 }}
                   className="mx-4 text-center"
                 >
-                  Extras
+                  More
                 </motion.button>
               </div>
               {isDropdownOpen && (

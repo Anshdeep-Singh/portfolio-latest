@@ -5,6 +5,7 @@ import React, { use, useCallback, useEffect, useRef, useState } from "react";
 import { set } from "firebase/database";
 import Image from 'next/image';
 import ChessGameComponent from "./ChessGameComponent";
+import MineSweeperComponent from "./MineSweeperComponent";
 
 interface Piece {
   type: string;
@@ -32,7 +33,7 @@ interface CardProps {
     return (
       <li className="card" onClick={onClick} data-index={index}>
         <div className="view front-view">
-          <span className="material-icons text-3xl sm:text-xl">?</span>
+          <span className="material-icons text-3xl smm:text-xl">?</span>
         </div>
         <div className="view back-view">
         <Image width={65} height={65} src={imageSrc} alt="cardImage" />
@@ -55,6 +56,7 @@ const MemoryGameComponent = () => {
  const [restartGame, setRestartGame] = useState(false);
  const [gameSize, setGameSize] = useState(0);
  const [playChess, setPlayChess] = useState(false);
+  const [playMineSweep, setPlayMineSweep] = useState(false);  
 
  useEffect(() => {
         const fetchImageUrls = async () => {
@@ -180,12 +182,15 @@ const shuffleCard = () => {
         animate={{ scale: 1, opacity: 1 }}
         className="min-w-[70vw] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-8 px-1"
       >
-        {playChess ? 
-        <>
+        {playChess || playMineSweep ? 
+        ( playChess ? <>
           <ChessGameComponent/>
-        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Memory Game</button>
-        </> : <>
-        <h1 className="text-2xl font-bold pb-4 md:text-xl sm:text-sm">Memory Game</h1>
+        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Go Back</button>
+        </>:  <>
+          <MineSweeperComponent rows={8} columns={8} bombs={15}/>
+        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayMineSweep(false)}>Go Back</button>
+        </>) : <>
+        <h1 className="text-2xl font-bold pb-4 md:text-xl smm:text-sm">Memory Game</h1>
         <div className="wrapper">
           <ul className="cards" ref={cardsRef}>
             {restartGame ? <>
@@ -197,9 +202,11 @@ const shuffleCard = () => {
             </>}
           </ul>
           <div className="flex flex-row justify-center items-center">
-                <h1 className="text-xl font-bold pt-2 pr-4 md:text-sm sm:text-xs">Flips : {flips}</h1>
-                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
+                <button className="bg-red-600 hover:bg-red-400 text-white font-bold py-2 px-2 rounded-lg mt-2 mr-2 text-sm sm:text-xs" onClick={() => setRestartGame(false)}>Restart</button>
+                <h1 className="text-xl font-bold pt-2 pr-4 md:text-sm sm:text-xs ml-2">Flips : {flips}</h1>
                 <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setPlayChess(true)}>Chess</button>
+                <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs smm:hidden" onClick={() => setPlayMineSweep(true)}>Mine Sweeper</button>
+                <button className="bg-gray-400 hover:bg-gray-300 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs hidden smm:block" onClick={() => setPlayMineSweep(true)}>💣</button>
         </div>
         </div>
 
