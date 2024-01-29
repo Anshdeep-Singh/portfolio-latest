@@ -2,7 +2,7 @@
 import "./globals.css";
 import "./memoryGameStyles.css"
 import "./chessStyles.css"
-import "./minesweeperStyles.css"
+import "./mineSweeperStyles.css"
 import { Inter } from 'next/font/google'
 import NavBar from "./components/navbar";
 
