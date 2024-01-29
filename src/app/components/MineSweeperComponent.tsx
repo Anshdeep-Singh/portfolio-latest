@@ -43,7 +43,7 @@ const initializeBoard = () => {
 
     setBoard(newBoard);
     setGameOver(false);
-    console.log(newBoard);
+    //console.log(newBoard);
   };
 
   // Initialize the board
