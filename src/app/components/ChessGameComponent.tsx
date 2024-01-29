@@ -383,7 +383,6 @@ const ChessGameComponent: React.FC = () => {
                         {board.map((row, rowIndex) => renderRow(row, rowIndex))}
                     </div>
                 </div>
-
             </div>
         </>
     );

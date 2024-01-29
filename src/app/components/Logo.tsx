@@ -15,7 +15,7 @@ const Logo = () => {
   };
 
   return (
-    <div className="flex item-center justify-center mt-2">
+    <div className="flex flex-col item-center justify-center mt-2">
       <motion.div
         onClick={(e) => e.preventDefault()}
         className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-light"
@@ -42,5 +42,6 @@ const Logo = () => {
     </div>
   );
 };
+
 
 export default Logo;

@@ -180,11 +180,10 @@ const shuffleCard = () => {
         animate={{ scale: 1, opacity: 1 }}
         className="min-w-[70vw] flex flex-col justify-between z-50 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400/90 dark:bg-white/75 rounded-lg backdrop-blur-md py-8 px-1"
       >
-        {playChess ? <>
-
+        {playChess ? 
+        <>
           <ChessGameComponent/>
-
-        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 ml-2 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Memory Game</button>
+        <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Memory Game</button>
         </> : <>
         <h1 className="text-2xl font-bold pb-4 md:text-xl sm:text-sm">Memory Game</h1>
         <div className="wrapper">
