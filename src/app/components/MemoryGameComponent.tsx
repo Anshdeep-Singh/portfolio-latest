@@ -187,7 +187,7 @@ const shuffleCard = () => {
           <ChessGameComponent/>
         <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayChess(false)}>Go Back</button>
         </>:  <>
-          <MineSweeperComponent rows={8} columns={8} bombs={15}/>
+          <MineSweeperComponent rows={8} columns={8} bombs={10}/>
         <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-4 text-sm sm:text-xs" onClick={() => setPlayMineSweep(false)}>Go Back</button>
         </>) : <>
         <h1 className="text-2xl font-bold pb-4 md:text-xl smm:text-sm">Memory Game</h1>
