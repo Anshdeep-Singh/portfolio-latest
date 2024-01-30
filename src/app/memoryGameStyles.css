@@ -13,6 +13,17 @@
   background: #F8F8F8;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+
+.wrapperSnake{
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  background: #F8F8F8;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 .cards, .card, .view{
   display: flex;
   align-items: center;
