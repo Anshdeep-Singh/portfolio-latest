@@ -224,10 +224,10 @@ const MemoryGameComponent = () => {
         {!gameSelected ? <>
           <h1 className="text-2xl font-bold pb-4 md:text-xl smm:text-sm">Select A Game To Play</h1>
           <div className="flex flex-row justify-center items-center">
-            <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("mineSweep")}>Mine Sweeper</button>
-            <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("memory")}>Memory Game</button>
-            <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("chess")}>Chess</button>
-            <button className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("snake")}>Snake</button>
+            <button className="bg-white hover:scale-[1.1] text-black font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("mineSweep")}>MineSweeper 💣</button>
+            <button className="bg-white hover:scale-[1.1] text-black font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("memory")}>Memory 🧩</button>
+            <button className="bg-white hover:scale-[1.1] text-black font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("chess")}>Chess ♖</button>
+            <button className="bg-white hover:scale-[1.1] text-black font-bold py-2 px-2 rounded-lg mt-2 mx-2 text-sm sm:text-xs" onClick={() => handleGameSelected("snake")}>Snake 🐍</button>
           </div>
         </> : <>
           {playChess ? <>
