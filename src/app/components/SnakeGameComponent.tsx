@@ -26,6 +26,8 @@ const SnakeGameComponent: React.FC = () => {
   const [direction, setDirection] = useState<'UP' | 'DOWN' | 'LEFT' | 'RIGHT'>('RIGHT');
   const [gameOver, setGameOver] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [joystick, setJoystick] = useState(false);
+
 
   const oppositeDirectionMap: Record<string, string> = {
     UP: 'DOWN',
@@ -90,18 +92,18 @@ const SnakeGameComponent: React.FC = () => {
     const foodEmoji = '🍎';
     const textX = food.x + TILE_SIZE / 2 - ctx.measureText(foodEmoji).width / 2;
     let textY = 0;
-    if(TILE_SIZE === 20) {
-        ctx.font = `10px Arial`;
-        textY = food.y + TILE_SIZE / 2 + 4;
+    if (TILE_SIZE === 20) {
+      ctx.font = `10px Arial`;
+      textY = food.y + TILE_SIZE / 2 + 4;
     }
-    else if(TILE_SIZE === 25) {
-        ctx.font = `12px Arial`;
-        textY = food.y + TILE_SIZE / 2 + 4;
+    else if (TILE_SIZE === 25) {
+      ctx.font = `12px Arial`;
+      textY = food.y + TILE_SIZE / 2 + 4;
 
     }
     else {
-        ctx.font = `24px Arial`;
-        textY = food.y + TILE_SIZE / 2 + 8;
+      ctx.font = `24px Arial`;
+      textY = food.y + TILE_SIZE / 2 + 8;
     }
 
 
@@ -119,7 +121,7 @@ const SnakeGameComponent: React.FC = () => {
 
   const handleKeyDown = (event: KeyboardEvent) => {
     if (gameOver) return;
-  
+
     switch (event.key) {
       case 'ArrowUp':
         setDirection((prevDirection) => (prevDirection !== 'DOWN' ? 'UP' : prevDirection));
@@ -137,7 +139,7 @@ const SnakeGameComponent: React.FC = () => {
         break;
     }
   };
-  
+
 
   const handleButtonPress = (newDirection: 'UP' | 'DOWN' | 'LEFT' | 'RIGHT') => {
     if (gameOver) return;
@@ -146,12 +148,12 @@ const SnakeGameComponent: React.FC = () => {
 
   const checkGameOver = () => {
     const head = snake[0];
-  
+
     if (head.x < 0 || head.x >= canvasWidth || head.y < 0 || head.y >= canvasHeight) {
       setGameOver(true);
       return;
     }
-  
+
     // Check for collision with any segment of the snake's body
     for (let i = 1; i < snake.length; i++) {
       // Check if head collides with the body segment (including the last tail segment)
@@ -161,14 +163,14 @@ const SnakeGameComponent: React.FC = () => {
       }
     }
   };
-  
+
 
   const moveSnake = () => {
     if (gameOver) return;
-  
+
     const newSnake = [...snake];
     let head = { ...newSnake[0], direction };
-  
+
     switch (direction) {
       case 'UP':
         head.y -= TILE_SIZE;
@@ -185,7 +187,7 @@ const SnakeGameComponent: React.FC = () => {
       default:
         break;
     }
-  
+
     // Check if the new direction is opposite to the current direction
     if (direction !== oppositeDirectionMap[newSnake[1]?.direction] || newSnake.length === 1) {
       if (!gameOver && head.x === food.x && head.y === food.y) {
@@ -193,9 +195,9 @@ const SnakeGameComponent: React.FC = () => {
       } else {
         newSnake.pop();
       }
-  
+
       setSnake([head, ...newSnake]);
-  
+
       checkGameOver(); // Move the collision check here
     } else {
       // If the new direction is opposite, allow the U-turn without checking for collisions
@@ -205,8 +207,8 @@ const SnakeGameComponent: React.FC = () => {
       }
     }
   };
-  
-  
+
+
   const generateRandomFoodPosition = (snakeSegments: { x: number; y: number; direction: string }[]) => {
     let randomX = Math.floor(Math.random() * BOARD_SIZE) * TILE_SIZE;
     let randomY = Math.floor(Math.random() * BOARD_SIZE) * TILE_SIZE;
@@ -238,29 +240,43 @@ const SnakeGameComponent: React.FC = () => {
     const gameLoop = setInterval(() => {
       moveSnake();
     }, 150);
-  
+
     return () => {
       clearInterval(gameLoop);
     };
   }, [direction, snake, gameOver]);
 
+  const handleJoystick = () => {
+    console.log('Joystick');
+    setJoystick(!joystick);
+  }
+
+
   return (
     <>
-    {gameOver ? <h1 className='text-2xl pb-1 md:text-xl smm:text-sm mt-2'>Game Over! Press Start To Play</h1> : <h1 className='text-2xl font-bold pb-1 md:text-xl smm:text-sm mt-2'>Snake Game</h1>}
-    <div className='wrapper flex flex-col items-center'>
-      <canvas id="snakeCanvas" ref={canvasRef} width={canvasWidth} height={canvasHeight}></canvas>
-        <button className='w-full fit-content bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 text-sm sm:text-xs' onClick={() => restartGame()}>Start</button>
-      <div className='wrapperSnake items-right hidden md:flex mt-2'>
+      {gameOver ? <h1 className='text-2xl pb-1 md:text-xl smm:text-sm mt-2'>Game Over! Press Start To Play</h1> : <h1 className='text-2xl font-bold pb-1 md:text-xl smm:text-sm mt-2'>Snake Game</h1>}
+      <div className='wrapper flex flex-col items-center'>
+        <canvas id="snakeCanvas" ref={canvasRef} width={canvasWidth} height={canvasHeight}></canvas>
         <div className='flex flex-row'>
-          <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2' onClick={() => handleButtonPress('LEFT')}>Left</button>
-          <div className='flex flex-col'>
-            <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-1' onClick={() => handleButtonPress('UP')}>Up</button>
-            <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-1' onClick={() => handleButtonPress('DOWN')}>Down</button>
-          </div>
-          <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2' onClick={() => handleButtonPress('RIGHT')}>Right</button>
+        <button className=' fit-content bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 mx-2 rounded-lg mt-2 text-sm sm:text-xs' onClick={() => restartGame()}>Start</button>
+        <button className=' fit-content bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 mx-2 rounded-lg mt-2 text-sm sm:text-xs' onClick={() => handleJoystick()}>Joystick</button>
         </div>
+
+        {joystick ? 
+        <>
+        <div className='wrapperSnake items-center md:items-right flex mt-2'>
+          <div className='flex flex-row'>
+            <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2' onClick={() => handleButtonPress('LEFT')}>Left</button>
+            <div className='flex flex-col'>
+              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-1' onClick={() => handleButtonPress('UP')}>Up</button>
+              <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2 mx-1' onClick={() => handleButtonPress('DOWN')}>Down</button>
+            </div>
+            <button className='bg-black hover:bg-gray-700 text-white font-bold py-2 px-2 rounded-lg mt-2' onClick={() => handleButtonPress('RIGHT')}>Right</button>
+          </div>
+        </div>
+        </> :
+         <><h3 className='mt-1'>Press joystick to enable controller or use Arrow keys for keyboard.</h3></>}
       </div>
-    </div>
     </>
   );
 };
