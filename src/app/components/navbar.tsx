@@ -176,30 +176,32 @@ const Navbar = () => {
                     >
                       Games
                     </button>
-                    <button
-                      className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
-                      onClick={toggleQrPanel}
-                    >
-                      QRCode Generator
-                    </button>
                     <motion.a
                       href="https://chat.anshdeepsingh.com/"
                       className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
                     >
-                      Global Chat App
+                      Global&nbsp;Chat&nbsp;App
                     </motion.a>
+                    <button
+                      className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
+                      onClick={toggleQrPanel}
+                    >
+                      QRCode&nbsp;Generator
+                    </button>
+
                     <motion.a
                       href="https://sketch.anshdeepsingh.com/"
                       className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
                     >
-                      Concept Sketch App
+                      Concept&nbsp;Sketch&nbsp;App
                     </motion.a>
                     <motion.a
                       href="https://playground.anshdeepsingh.com/"
                       className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
                     >
-                      Frontend Playground
+                      Frontend&nbsp;Playground
                     </motion.a>
+
 
                     <div
                       className="flex flex-row justify-center items-center">
