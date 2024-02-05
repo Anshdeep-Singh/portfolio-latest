@@ -194,6 +194,12 @@ const Navbar = () => {
                     >
                       Concept Sketch App
                     </motion.a>
+                    <motion.a
+                      href="https://playground.anshdeepsingh.com/"
+                      className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
+                    >
+                      Frontend Playground
+                    </motion.a>
 
                     <div
                       className="flex flex-row justify-center items-center">
@@ -311,6 +317,15 @@ const Navbar = () => {
                   router={router}
                 >
                   Concept Sketch App
+                </CustomMobilelink>
+                <CustomMobilelink
+                  title="Frontend Playground"
+                  href="https://playground.anshdeepsingh.com/"
+                  className=""
+                  toggle={handleToggle}
+                  router={router}
+                >
+                  Frontend Playground
                 </CustomMobilelink>
                 <motion.div
                   className={`relative group my-2 cursor-pointer`}
