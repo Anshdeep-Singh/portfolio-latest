@@ -178,7 +178,7 @@ const Navbar = () => {
                     </button>
                     <button
                       className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
-                      onClick={toggleGamePanel}
+                      onClick={toggleQrPanel}
                     >
                       QRCode Generator
                     </button>
