@@ -23,6 +23,7 @@
     "react-dom": "^18",
     "react-responsive": "^9.0.2",
     "react-three-fiber": "^6.0.13",
+    "sharp": "^0.33.2",
     "three": "^0.160.0"
   },
   "devDependencies": {

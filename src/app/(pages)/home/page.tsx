@@ -1,16 +1,19 @@
-import { ref } from "firebase/storage";
-import { getDownloadURL } from "firebase/storage";
+// import { ref } from "firebase/storage";
+// import { getDownloadURL } from "firebase/storage";
 import React from "react";
-import { storage } from "../../firebase";
-import Image from "next/image";
+// import { storage } from "../../firebase";
+// import Image from "next/image";
 import AnimatedText from "@/app/components/AnimatedText";
-import Link from "next/link";
-import { BulbComponent, BuyCoffeeComponent, DownloadComponent } from "@/app/components/Icons";
+// import Link from "next/link";
+import { DownloadComponent } from "@/app/components/Icons";
 import SpinningLogo from "@/app/components/SpinningLogo";
 import Shapes from "@/app/components/shapes/Shapes";
 
+
+
 import { Metadata } from 'next'
 import TransitionEffect from "@/app/components/TransitionEffect";
+import Hero from "@/app/components/Hero";
  
 export const metadata: Metadata = {
   title: 'Anshdeep Singh',
@@ -19,6 +22,7 @@ export const metadata: Metadata = {
  
 
 const page = async () => {
+  
   const user = {
     name: "Anshdeep Singh",
     bio: "Jack of all trades, master of some.",
@@ -29,9 +33,8 @@ const page = async () => {
     skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   };
 
-  const profileImageRef = ref(storage, "display_pics/anshdeep4.png");
-
-  const profileImageUrl = await getDownloadURL(profileImageRef);
+  // const profileImageRef = ref(storage, "display_pics/anshdeep4.png");
+  // const profileImageUrl = await getDownloadURL(profileImageRef);
 
   return (
     <>
@@ -40,13 +43,7 @@ const page = async () => {
       <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <div className="flex item-center justify-between w-full lg:flex-col">
           <div className="w-1/2 md:w-full">
-            <Image
-              src={profileImageUrl}
-              alt="Profile Image"
-              width={200}
-              height={200}
-              className="w-full h-auto lg:hidden md:inline-block md:w-full"
-            />
+            <Hero/>
           </div>
           <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center md:w-full">
             <AnimatedText
