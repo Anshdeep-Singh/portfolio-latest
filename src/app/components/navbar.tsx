@@ -167,27 +167,25 @@ const Navbar = () => {
               </div>
               {isDropdownOpen && (
                 <div className="absolute w-[150px] mt-2 items-center bg-white border border-gray-300 divide-y divide-gray-200 rounded-md shadow-lg z-50">
-                  {/* Dropdown content goes here */}
-                  <div className="py-1 px-2 text-center w-full">
-                    {/* Add your additional dropdown items here */}
+                  <div className="py-1  text-center w-full">
                     <button
-                      className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full rounded-lg"
+                      className="px-4 py-2 text-xs text-center text-gray-700 hover:bg-gray-100 w-full rounded-lg"
                       onClick={toggleGamePanel}
                     >
                       Games
                     </button>
                     <motion.a
+                      href="https://ig.anshdeepsingh.com/"
+                      className="block px-4 py-2 text-xs text-blue-800 hover:bg-gray-100 rounded-lg animate-pulse"
+                    >
+                      ImageGenie&nbsp;AI
+                    </motion.a>
+                    <motion.a
                       href="https://chat.anshdeepsingh.com/"
                       className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
                     >
-                      Global&nbsp;Chat&nbsp;App
+                      Global&nbsp;Chat&nbsp;AI&nbsp;App
                     </motion.a>
-                    <button
-                      className="block px-4 py-2 text-xs text-gray-700 hover:bg-gray-100 rounded-lg"
-                      onClick={toggleQrPanel}
-                    >
-                      QRCode&nbsp;Generator
-                    </button>
 
                     <motion.a
                       href="https://sketch.anshdeepsingh.com/"
@@ -201,7 +199,12 @@ const Navbar = () => {
                     >
                       Frontend&nbsp;Playground
                     </motion.a>
-
+                    <button
+                      className="px-4 py-2 text-xs text-center text-gray-700 hover:bg-gray-100 rounded-lg"
+                      onClick={toggleQrPanel}
+                    >
+                      QRCode&nbsp;Generator
+                    </button>
 
                     <div
                       className="flex flex-row justify-center items-center">
@@ -303,13 +306,22 @@ const Navbar = () => {
                   Resume
                 </CustomMobilelink>
                 <CustomMobilelink
-                  title="Global Chat App"
+                  title="Image Genie AI"
+                  href="https://ig.anshdeepsingh.com/"
+                  className="animate-pulse text-blue-800"
+                  toggle={handleToggle}
+                  router={router}
+                >
+                  Image Genie AI
+                </CustomMobilelink>
+                <CustomMobilelink
+                  title="Global Chat AI App"
                   href="https://chat.anshdeepsingh.com/"
                   className=""
                   toggle={handleToggle}
                   router={router}
                 >
-                  Global Chat App
+                  Global Chat AI App
                 </CustomMobilelink>
                 <CustomMobilelink
                   title="Concept Sketch App"
