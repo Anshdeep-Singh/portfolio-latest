@@ -53,11 +53,10 @@ const page = async () => {
             <p className="my-4 text-base font-medium hover:animate-wiggle sm:text-sm">{user.summary}</p>
             <div className="flex items-center self-start mt-2 lg:self-center">
               <a
-                href="/resume/"
+                href="/skills/"
                 className="flex items-center bg-black text-white p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-gray-300 shadow-lg sm:p-1.5 sm:text-sm"
               >
-                Resume
-                <DownloadComponent className="ml-1" />
+                About Me
               </a>
               <a
                 href="https://www.linkedin.com/in/anshdeepsingh369/"
