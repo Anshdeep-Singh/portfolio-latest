@@ -39,6 +39,7 @@ const singleLetter = {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className = "" }) => {
   return (
+    
     <div className='w-full mx-auto flex items-center py-2 justify-center text-center overflow-hidden sm:py-0'>
       <motion.h1
         className={`inline-block w-full text-black font-bold capitalize text-8xl ${className}`}
