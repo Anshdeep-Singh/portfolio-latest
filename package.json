@@ -27,10 +27,11 @@
     "three": "^0.160.0"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.29",
+    "@types/jquery": "^3.5.30",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/webxr": "^0.5.16",
     "autoprefixer": "^10.4.16",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",

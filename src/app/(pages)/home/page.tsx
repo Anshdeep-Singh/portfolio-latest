@@ -39,7 +39,11 @@ const page = async () => {
   return (
     <>
     <TransitionEffect/>
-    <main className="flex items-center text-dark w-full flex-grow pt-0">
+    <main className="flex flex-col items-center text-dark w-full flex-grow pt-0">
+      <div className="w-full bg-gray-100 rounded-lg text-center justify-center items-center text-xs font-mono">
+      A new version of this webpage is currently in development. Check it out&nbsp;
+      <a href="https://new.anshdeepsingh.com" target="_blank" className="text-blue-500 underline">here</a>!
+      </div>
       <div className="w-full h-full inline-block z-0 bg-white p-32 mt-0 xl:p-24 lg:p-20 md:p-20 sm:p-8">
         <div className="flex item-center justify-between w-full lg:flex-col">
           <div className="w-1/2 md:w-full">

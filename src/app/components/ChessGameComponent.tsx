@@ -1,6 +1,4 @@
-import { set } from 'firebase/database';
 import React, { use, useEffect, useState } from 'react';
-import { Chess } from 'chess.js'
 
 
 // Chess piece icons
