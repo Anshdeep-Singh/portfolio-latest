@@ -25,7 +25,7 @@ const page = async () => {
   
   const user = {
     name: "Anshdeep Singh",
-    bio: "Jack of all trades, master of some.",
+    bio: "Welcome to my portfolio!",
     location: "Vancouver, Canada",
     website: "https://new.anshdeepsingh.com",
     summary:
