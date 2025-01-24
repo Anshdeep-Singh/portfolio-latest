@@ -29,7 +29,7 @@ const page = async () => {
     location: "Vancouver, Canada",
     website: "https://new.anshdeepsingh.com",
     summary:
-      "Tech enthusiast skilled in web development, data analytics and AI. Proficient in coding and algorithms, dedicated to shaping the digital future. Seeking opportunities to drive innovation collaboratively.",
+      "Tech enthusiast skilled in Full Stack development and AI Integration. Currently seeking opportunities to transform ideas into reality.",
     skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   };
 
@@ -62,7 +62,7 @@ const page = async () => {
                 About Me
               </a>
               <a
-                href="https://www.linkedin.com/in/anshdeepsingh369/"
+                href="https://www.linkedin.com/in/sanshdeep/"
                 target="_blank"
                 className="ml-4 text-lg font-medium capitalize text-black underline hover:text-blue-500 md:text-md sm:text-sm"
               >
